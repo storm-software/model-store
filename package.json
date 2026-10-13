@@ -1,11 +1,11 @@
 {
-  "name": "@powerlines-monorepo-template/monorepo",
+  "name": "@model-store/monorepo",
   "version": "0.0.1",
   "type": "module",
-  "description": "⚡ A monorepo containing TypeScript utility packages with shared functionality common to many Storm Software applications.",
+  "description": "🗃️  A cross between Speakeasy and Shadcn UI - point to a repository of model schemas and generate code for it.",
   "repository": {
     "type": "github",
-    "url": "https://github.com/storm-software/powerlines-monorepo-template.git"
+    "url": "https://github.com/storm-software/model-store.git"
   },
   "homepage": "https://stormsoftware.com",
   "bugs": {
@@ -23,16 +23,20 @@
   },
   "license": "Apache-2.0",
   "private": true,
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@11.9.0",
   "engines": {
     "node": ">=26.3.0",
-    "pnpm": ">=11.1.2"
+    "pnpm": ">=11.9.0"
   },
   "keywords": [
-    "storm-software",
-    "template",
-    "github-template",
-    "monorepo"
+    "model-store",
+    "openapi",
+    "asyncapi",
+    "json-schema",
+    "graphql",
+    "grpc",
+    "speakeasy",
+    "stainless"
   ],
   "scripts": {
     "adr": "pnpm log4brains adr new",
@@ -75,6 +79,7 @@
     "@storm-software/config-tools": "catalog:",
     "@storm-software/cspell": "catalog:",
     "@storm-software/eslint": "catalog:",
+    "@storm-software/eslint-plugin-pnpm": "catalog:",
     "@storm-software/git-tools": "catalog:",
     "@storm-software/linting-tools": "catalog:",
     "@storm-software/markdownlint": "catalog:",
@@ -100,7 +105,7 @@
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "^26.3.0",
+      "version": "^26.11.1",
       "onFail": "download"
     }
   },
@@ -108,7 +113,7 @@
     "defaultBranch": "main",
     "workspaceProtocol": "require"
   },
-  "namespace": "@powerlines-monorepo-template",
+  "namespace": "@model-store",
   "nx": {
     "includedScripts": [
       "lint-knip",

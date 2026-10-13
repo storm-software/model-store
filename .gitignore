@@ -12,6 +12,7 @@ out
 
 powerlines.d.ts
 .powerlines
+graphify-out
 
 # dependencies
 node_modules

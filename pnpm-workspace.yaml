@@ -4,53 +4,45 @@ packages:
   - docs/*
 catalog:
   "@ls-lint/ls-lint": ^2.3.1
-  "@nx/devkit": ^22.7.5
-  "@nx/eslint-plugin": 22.7.5
-  "@nx/js": 22.7.5
-  "@nx/plugin": 22.7.5
-  "@nx/vite": 22.7.5
-  "@nx/vitest": 22.7.5
-  "@nx/workspace": 22.7.5
-  "@powerlines/nx": ^0.13.176
-  "@powerlines/tsconfig": ^0.4.186
-  "@powerlines/tsdoc": ^0.2.134
-  "@storm-software/config": ^1.138.6
-  "@storm-software/config-tools": ^1.190.69
-  "@storm-software/cspell": ^0.46.137
-  "@storm-software/eslint": ^0.170.102
-  "@storm-software/git-tools": ^2.131.76
-  "@storm-software/linting-tools": ^1.133.99
-  "@storm-software/markdownlint": ^0.30.225
-  "@storm-software/pnpm-tools": ^0.7.80
-  "@storm-software/prettier": ^0.59.122
-  "@storm-software/tsconfig": ^0.48.136
-  "@storm-software/untyped": ^0.24.211
-  "@storm-software/workspace-tools": ^1.296.49
-  "@swc-node/register": ^1.11.1
-  "@swc/core": ^1.15.41
-  "@swc/helpers": ^0.5.23
-  "@taplo/cli": ^0.7.0
-  "@types/node": ^25.9.3
+  "@nx/devkit": 23.3.0
+  "@nx/eslint-plugin": 23.3.0
+  "@nx/js": 23.3.0
+  "@nx/plugin": 23.3.0
+  "@nx/vite": 23.3.0
+  "@nx/vitest": 23.3.0
+  "@nx/workspace": 23.3.0
+  "@powerlines/nx": ^0.13.254
+  "@powerlines/tsconfig": ^0.4.258
+  "@powerlines/tsdoc": ^0.2.206
+  "@storm-software/config": ^1.138.86
+  "@storm-software/config-tools": ^1.190.150
+  "@storm-software/cspell": ^0.46.217
+  "@storm-software/eslint": ^0.170.185
+  "@storm-software/eslint-plugin-pnpm": ^0.0.112
+  "@storm-software/git-tools": ^2.132.7
+  "@storm-software/linting-tools": ^1.134.80
+  "@storm-software/markdownlint": ^0.30.305
+  "@storm-software/prettier": ^0.59.203
+  "@storm-software/tsconfig": ^0.48.216
+  "@storm-software/untyped": ^0.24.292
+  "@storm-software/workspace-tools": ^1.297.19
+  "@types/node": ^25.9.9
   "@typescript/native-preview": 7.0.0-dev.20251218.3
   copyfiles: ^2.4.1
-  esbuild: ^0.27.7
-  eslint: ^10.5.0
+  eslint: ^10.12.0
   lefthook: ^1.13.6
   log4brains: ^1.1.0
-  nx: 22.7.5
-  prettier: ^3.8.4
+  nx: 23.3.0
+  prettier: ^3.9.10
   rimraf: ^6.1.3
-  sherif: ^1.0.0
-  tsdown: ^0.22.2
-  typescript: ^6.0.3
   verdaccio: 6.0.5
-  vite: ^8.0.16
-  vitest: ~4.1.8
+  vite: ^8.3.4
+  vitest: ~4.1.11
   zx: ^8.8.5
 overrides:
-  "@powerlines-monorepo-template/tools-config": workspace:*
-  "@powerlines-monorepo-template/tools-scripts": workspace:*
-  "@powerlines-monorepo-template/tools-cspell": workspace:*
+  "@model-store/tools-config": workspace:*
+  "@model-store/tools-scripts": workspace:*
+  "@model-store/tools-cspell": workspace:*
   cookie: ">=0.7.0"
   debug: ">=4.4.0"
   follow-redirects: ">=1.15.9"
@@ -67,15 +59,25 @@ overrides:
   postcss: ">=8.5.1"
   shell-quote: ">=1.8.2"
   simple-git: ">=3.27.0"
-shamefullyHoist: true
-engineStrict: true
-fetchTimeout: 240000
-dedupeDirectDeps: true
-dedupePeerDependents: true
 allowBuilds:
+  "@parcel/watcher": true
   "@swc/core": true
   core-js: true
   esbuild: true
   lefthook: true
   nx: true
   unrs-resolver: true
+cleanupUnusedCatalogs: true
+catalogMode: strict
+linkWorkspacePackages: true
+engineStrict: true
+fetchTimeout: 1000000
+minimumReleaseAgeExclude:
+  - "@storm-software/*"
+  - conventional-changelog-storm-software
+  - "@stryke/*"
+  - "@power-plant/*"
+  - "@powerlines/*"
+  - "@shell-shock/*"
+  - powerlines
+nodeVersion: 26.3.0
